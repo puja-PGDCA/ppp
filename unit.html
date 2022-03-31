@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<title>my first web page</title>
+</head>
+<body>
+<h2 align=center>UNIT IV</center></h2>
+<b><i>
+Introduction Terminology<br>
+Representation of trees,<br>
+Binary trees abstract data type<br>
+Properties of binary trees<br>
+Binary tree representation<br>
+Binary tree traversals: In order, preorder, post order<br>
+Binary search trees Definition<br>
+Operations:searching BST, insert into BST, delete from a BST, Height of a BST<br>
+</i>
+<p>
+Trees: Non-Linear data structure<br>
+</b>
+<br>
+<i>
+<br>A data structure is said to be linear if its elements form a sequence or a linear list. Previous
+linear data structures that we have studied like an array, stacks, queues and linked lists organize 
+data in linear order. A data structure is said to be non linear if its elements form a hierarchical 
+classification where, data items appear at various levels.
+
+<br>Trees and Graphs are widely used non-linear data structures. Tree and graph structures represent
+hierarchical relationship between individual data elements. Graphs are nothing but trees with 
+certain restrictions removed.
+</i>
+<br>Trees represent a special case of more general structures known as graphs. In a graph, there is no 
+restrictions on the number of links that can enter or leave a node, and cycles may be present in the 
+graph. The figure 5.1.1 shows a tree and a non-tree.
+<center><image src="1.jpg" height="100%" width="100"></center> 
+Tree is a popular data structure used in wide range of applications. A tree data structure can be 
+defined as follows...<br>
+<br>Tree is a non-linear data structure which organizes data in hierarchical structure and this is a 
+recursive definition.
+<p>
+There is a specially designated node called the root. The remaining nodes are partitioned into n>=0 
+disjoint sets T1, ..., Tn, where each of these sets is a tree. We call T1, ..., Tn are the subtrees of the 
+root.
+</p>
+<center><image src="2.jpg" height="95%" width="99%"></center>
+<p>A tree is hierarchical collection of nodes. One of the nodes, known as the root, is at the top of the 
+hierarchy. Each node can have at most one link coming into it. The node where the link originates is 
+called the parent node. The root node has no parent. The links leaving a node (any number of links 
+are allowed) point to child nodes. Trees are recursive structures. Each child node is itself the root of 
+a subtree. At the bottom of the tree are leaf nodes, which have no children.</p>
+<b>Advantages of tree</b><br>
+Trees are so useful and frequently used, because they have some very serious advantages:<br>
+<ul>
+<li>Trees reflect structural relationships in the data</li>
+<li>Trees are used to represent hierarchies</li>
+<li>Trees provide an efficient insertion and searching</li>
+<li>Trees are very flexible data, allowing to move sub trees around with minimum effort</li>
+</ul>
+<b>Introduction Terminology</b>
+<p>
+In a Tree, Every individual element is called as Node. Node in a tree data structure, stores the actual 
+data of that particular element and link to next element in hierarchical structure. Example
+</p>
+<center><image src="3.jpg" height="95%" width="99%"></center>
+<center><image src="4.jpg" height="95%" width="99%"></center>
+1.Root<br>
+<p>In a tree data structure, the first node is called as Root Node. Every tree must have root node. We 
+can say that root node is the origin of tree data structure. In any tree, there must be only one root 
+node. We never have multiple root nodes in a tree. In above tree, A is a Root node</p>
+2. Edge<br>
+<p>In a tree data structure, the connecting link between any two nodes is called as EDGE. In a tree with 
+'N' number of nodes there will be a maximum of 'N-1' number of edges.</p>
+3. Parent<br>
+<p>In a tree data structure, the node which is predecessor of any node is called as PARENT NODE. In 
+simple words, the node which has branch from it to any other node is called as parent node. Parent 
+node can also be defined as "The node which has child / children". e.g., Parent (A,B,C,D).</p>
+4. Child<br>
+<p>In a tree data structure, the node which is descendant of any node is called as CHILD Node. In 
+simple words, the node which has a link from its parent node is called as child node. In a tree, any 
+parent node can have any number of child nodes. In a tree, all the nodes except root are child nodes.
+e.g., Children of D are (H, I,J).</p>
+5. Siblings<br>
+<p>In a tree data structure, nodes which belong to same Parent are called as SIBLINGS. In simple 
+words, the nodes with same parent are called as Sibling nodes. Ex: Siblings (B,C, D)</p>
+6. Leaf<br>
+<p>In a tree data structure, the node which does not have a child (or) node with degree zero is called 
+as LEAF Node. In simple words, a leaf is a node with no child.
+In a tree data structure, the leaf nodes are also called as External Nodes. External node is also a node 
+with no child. In a tree, leaf node is also called as 'Terminal' node. Ex: (K,L,F,G,M,I,J)</p>
+7. Internal Nodes<br>
+<p>In a tree data structure, the node which has atleast one child is called as INTERNAL Node. In simple 
+words, an internal node is a node with atleast one child.
+In a tree data structure, nodes other than leaf nodes are called as Internal Nodes. The root node is 
+also said to be Internal Node if the tree has more than one node. Internal nodes are also called as 
+'Non-Terminal' nodes. Ex:B,C,D,E,H</p>
+8. Degree<br>
+<p>In a tree data structure, the total number of children of a node (or)number of subtrees of a node is 
+called as DEGREE of that Node. In simple words, the Degree of a node is total number of children it 
+has. The highest degree of a node among all the nodes in a tree is called as 'Degree of Tree'</p>
+<center><image src="5.jpg" height="90%" width="99%"></center>
+9. Level<br>
+<p>In a tree data structure, the root node is said to be at Level 0 and the children of root node are at 
+Level 1 and the children of the nodes which are at Level 1 will be at Level 2 and so on... In simple 
+words, in a tree each step from top to bottom is called as a Level and the Level count starts with '0' 
+and incremented by one at each level (Step). Some authors start root level with 1.</p>
+10. Height<br>
+<p>In a tree data structure, the total number of edges from leaf node to a particular node in the longest 
+path is called as HEIGHT of that Node. In a tree, height of the root node is said to be height of the 
+tree. In a tree, height of all leaf nodes is '0'.</p>
+11. Depth<br>
+<p>In a tree data structure, the total number of edges from root node to a particular node is called 
+as DEPTH of that Node. In a tree, the total number of edges from root node to a leaf node in the 
+longest path is said to be Depth of the tree. In simple words, the highest depth of any leaf node in a 
+tree is said to be depth of that tree. In a tree, depth of the root node is '0'.</p>
+12. Path<br>
+<p>In a tree data structure, the sequence of Nodes and Edges from one node to another node is called 
+as PATH between that two Nodes. Length of a Path is total number of nodes in that path. In below 
+example the path A - B - E - J has length 4.</p>
+<center><image src="6.jpg" height="90%" width="99%"></center>
+13. Sub Tree<br>
+<p>In a tree data structure, each child from a node forms a subtree recursively. Every child node will 
+form a subtree on its parent node.</p>
+<center><image src="7.jpg" height="95%" width="99%"></center>
+<b>Tree Representations</b><br>
+A tree data structure can be represented in two methods. Those methods are as follows...<br>
+1.List Representation<br>
+2. Left Child - Right Sibling Representation<br>
+Consider the following tree...<br>
+
+
+
+
+
+
+
+
+
+
+
+
